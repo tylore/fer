@@ -7,7 +7,7 @@ deploy:
   provider: heroku
   api_key:
     secure: I0/lmaY7nSBjvgUM7jQkkGm4n2j6qLLMSa4cHzmFFjjZ5qIdITqJhwk5/1xo5CNe92yuY595Bx2qteS+veLiaOMz0NGepqForVvyDgyDR4Cjoid5GPRT2OFxEdFCfSdniphpBwCemdTQN4dAd0HNOwvJ75jZB0CNzV5p6NDaDFY=
-   app: fer
-     run:
-       - "rake db:migrate"
-       - restart
+  app: fer
+  run:
+    - "rake db:migrate"
+    - restart
