@@ -2,6 +2,8 @@
 ##GitHub Push Protocol
 
 NOTE: Anything listed with quotes and italics i.e "*branch name*" means you have to replace that text with the nouns from the Ruby project. 
+###ALWAYS PULL BEFORE YOU PUSH 
+After you have created your branch here is the procedure for makign edits.  
 
 1. git checkout "*branch name*"
 2. git add -A
