@@ -1,0 +1,56 @@
+// Place all the styles related to the referrals controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.new_fer {
+	text-align: center;
+    font-family: Cooper Black;
+    color: #00ff7f;
+    text-shadow: 0 0 3px black, 0 0 5px black;
+
+}
+.new_fer_form {
+	text-align: left;
+	font-family: Cambria;
+	border: 5px solid #00ff7f;
+	border-radius: 10px;
+    padding: 15px;
+    background-color: white;
+
+}
+.button radius {
+	color: pink;
+}
+
+.all_fers {
+	text-align: left;
+	font-family: Cambria;
+	border: 5px solid #00ff7f;
+	border-radius: 10px;
+    padding: 15px;
+    background-color: white;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+ul {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+}
+
+li {
+	margin: 5px;
+	margin-top: 10px;
+	padding: 7px;
+	list-style: none;
+	font-color: black; 
+	background-color:white; 
+	border: 2px solid #00ff7f;
+	text-decoration:none;
+	border-radius: 10px;
+	display: inline;
+	position: relative;
+	width: 20px;
+}
+
