@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_input: MyString
+  is_happy: false
+  is_emo: false
+  is_hate: false
+  is_awesome: false
+  is_shock: false
+
+two:
+  user_input: MyString
+  is_happy: false
+  is_emo: false
+  is_hate: false
+  is_awesome: false
+  is_shock: false

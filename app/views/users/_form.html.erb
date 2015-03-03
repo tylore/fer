@@ -1,0 +1,9 @@
+<div class="new user">
+<%= form_for User.new do |f| %>
+ 	
+ 	Twitter Username:      <%= f.text_field :twitter %>
+    Password:              <%= f.password_field :password %>
+    
+    <%= f.submit 'Sign In', :class => 'button radius success' %>
+<% end %>
+</div>

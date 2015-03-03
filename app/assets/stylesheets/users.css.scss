@@ -1,0 +1,31 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+ 
+ body {
+ 	background-color: white;
+ }
+
+ .new user {
+    font-family: Cooper Black;
+ }
+
+#fer  {
+ 	font-family: Cooper Black;
+ 	color: white;
+ 	background-color: #00ff7f;
+ 	text-shadow: 0 0 3px #003366, 0 0 5px #003366;
+ 	border: 2px solid #003366;
+ 	padding-left: 15px;
+ 	text-align: center;
+
+ }
+
+ .sign_in {
+    font-family: Cambria;
+    font-color: #003366;
+    border: 5px solid #00ff7f;
+    padding: 15px;
+    background-color: white;
+    border-radius: 10px;
+ }
