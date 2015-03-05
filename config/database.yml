@@ -58,7 +58,7 @@ development:
 test:
   adapter: postgresql
   database: travis_ci_test
-  username: postgres
+  username:
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -82,5 +82,5 @@ test:
 production:
   <<: *default
   database: fer_production
-  username: fer
+  username:
   password: <%= ENV['FER_DATABASE_PASSWORD'] %>
