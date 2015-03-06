@@ -11,3 +11,9 @@
 /log/*
 !/log/.keep
 /tmp
+/.idea/fer.iml
+/.idea/workspace.xml
+
+
+# Ignore application configuration
+/config/application.yml
