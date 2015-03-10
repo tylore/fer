@@ -15,6 +15,10 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'better_errors'
 # Styling gem for foundation
 gem 'foundation-rails'
+# Da Tweets OAuth
+gem 'omniauth-twitter'
+# Da Tweets Gem
+gem 'twitter'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
