@@ -68,7 +68,6 @@ GEM
     debug_inspector (0.0.2)
     debugger-linecache (1.2.0)
     diff-lcs (1.2.5)
-<<<<<<< HEAD
     equalizer (0.0.9)
     elasticsearch (1.0.8)
       elasticsearch-api (= 1.0.7)
