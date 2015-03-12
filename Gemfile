@@ -15,6 +15,8 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'better_errors'
 # Styling gem for foundation
 gem 'foundation-rails'
+# Seeeeecreeeeeets
+gem 'figaro'
 # Da Tweets OAuth
 gem 'omniauth-twitter'
 # Da Tweets Gem
