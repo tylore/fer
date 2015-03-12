@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   
   def user_params
-   params.require(:user).permit(:full_name, :twitter, :password, :password_confrimation)
+   params.require(:user).permit(:uid)
   end
 
   def index
@@ -9,7 +9,7 @@ class UsersController < ApplicationController
   end
 
   def edit
-    user = User.find(params[:id])
+    user = User.find(params[:uid])
   end
 
   def new
@@ -17,7 +17,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    user = User.find(params[:id])
+    user = User.find(params[:uid])
   end
 
   def create

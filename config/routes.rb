@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+
+  get "/auth/:provider/callback", to: "sessions#create"
+  delete 'sessions' => 'sessions#destroy'
+
   resources :users
   resources :referrals
 
