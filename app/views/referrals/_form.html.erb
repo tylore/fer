@@ -1,45 +1,35 @@
 
 <div class="row center-text">
-<%= form_for Referral.new, :html => {:class => 'custom'} do |f| %>
-	<div class="small-6 small-centered columns ">
-	<div class="new_fer_form">
-	Which show did you watch?? <%= f.text_field :user_input %>
-	How did the show make you feel?<br /><br />
-	
-   Happy!       
-   <div class="switch radius"> 
-   <input id="a" type="checkbox">
-   <label for="a" onclick=""></label>
-
-                        <%= f.check_box :is_happy %><br />	
-</div>
-    Shocking!	
-    <div class="switch radius">
-    <input id="b" type="checkbox">
-    <label for="b" onclick=""></label>
-			         <%= f.check_box :is_shock %><br />
-</div> 
-    Awesome!	
-    <div class="switch radius">
-    <input id="c" type="checkbox">
-    <label for="c" onclick=""></label>
-		             <%= f.check_box :is_awesome %><br />
-</div> 
-    Heart Touching    
-    <div class="switch radius">
-    <input id="d" type="checkbox">
-    <label for="d" onclick=""></label>
-               <%= f.check_box :is_emo %><br />
-</div>
-   Hated it becuase it was SO GOOD   
-   <div class="switch radius">
-   <input id="e" type="checkbox">
-   <label for="e" onclick=""></label>
-               <%= f.check_box :is_hate %><br />
-</div>     
+<!-- :html => {:class => 'custom'} -->
+  <%= form_for @referral do |f| %>
+  	<div class="small-6 small-centered columns ">
+    	<div class="new_fer_form"> 
+      Which show did you watch?? 
+      <%= f.text_field :user_input %>
+      How did the show make you feel?<br /><br />
+        Happy!       
+        <div > 
+          <%= f.check_box :is_happy %><br />	
+        </div>
+        Shocking!	
+        <div > 
+          <%= f.check_box :is_shock %><br />
+        </div> 
+        <!-- Awesome! -->	
+      <!--   <div>
+      		<%#= f.check_box :is_awesome %><br />
+        </div>  -->
+        Heart Touching    
+        <div > 
+          <%= f.check_box :is_emo %><br />
+        </div>
+        Hated it because it was SO GOOD   
+        <div > 
+          <%= f.check_box :is_hate %><br />
+        </div>     
+      </div>
+      <br />
+      <%= f.submit 'Create Fer', :class => 'button radius success' %>
     </div>
-    <br />
-    <%= f.submit 'Create Fer', :class => 'button radius success' %>
-  </div>
-<% end %>
+  <% end %>
 </div>

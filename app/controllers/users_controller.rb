@@ -13,7 +13,7 @@ class UsersController < ApplicationController
   end
 
   def new
-    user = User.new
+    @user = User.new
   end
 
   def show
@@ -21,6 +21,12 @@ class UsersController < ApplicationController
   end
 
   def create
+    @user = User.create(params.require(:user).permit(:twitter, :password))
+    if @user.save
+       redirect_to new_referral_path
+    else 
+       redirect_to new_user_path
+    end
   end
 
   def update

@@ -1,3 +1,13 @@
+ <p id="notice"><%= notice %></p>
+
+    <%= form_tag referrals_path, :method => :get do %>
+
+    <%= text_field_tag :search, params[:search] %>
+
+    <%= submit_tag "Search your favorite show!", :user_input => nil %>
+ 
+<% end %> 
+
 <ul>
 <li><%= link_to "Create Fers", new_referral_path %></li>
 <li><%= link_to "Sign Out", new_user_path %></li>
@@ -12,11 +22,11 @@
  <div class="all_fers">
  <hr />
   <p><b>Show watched: <%= referral.user_input %></b></p>
-  <p>Happy: <%= referral.is_happy %></p>
-  <p>Heart Touching: <%= referral.is_emo %></p>
+  <p>Happy: <%= referral.is_happy %></p> 
   <p>Shocking! <%= referral.is_shock %></p>
-  <p>Awesome! <%= referral.is_awesome %></p>
-  <p>Hated it becuase it was SO GOOD! <%= referral.is_hate %></p><br />
+  <p>Heart Touching: <%= referral.is_emo %></p>
+  <!-- <p>Awesome! <%= referral.is_awesome %></p> -->
+  <p>Hated it because it was SO GOOD! <%= referral.is_hate %></p><br />
   
   	 <%= link_to 'Delete', referral, method: :delete, data: { confirm: 'Are you sure?' } %></h5><br>
      <hr /> 
