@@ -1,26 +1,21 @@
 class SessionsController < ApplicationController
   def create
     auth = request.env["omniauth.auth"]
-    user = User.find_by_provider_and_uid(auth["provider"], auth["uid"])
-    if auth != auth["uid"]
+    user = User.where(uid: auth["uid"]).first
+    if user
       session[:user_id] = auth["uid"]
-      redirect_to new_referral_path, :notice => "Signed in!"
+      redirect_to new_referral_path
     else
      # raise auth["uid"].inspect
       @user = User.new
       @user.uid = auth["uid"]
+      @user.
       @user.save
-      session[:user_id] = @user.id
-      # raise user.inspect
-      redirect_to new_referral_path, :notice => "Signed in!"
+      session[:user_id] = @user.uid
+      redirect_to new_referral_path
 
 
       end
   end
 
-  def destroy
-    raise
-    session[:user_id] = nil
-    redirect_to new_referral_path, :notice => "Signed out!"
-  end
-  end
+end
