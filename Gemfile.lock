@@ -68,7 +68,6 @@ GEM
     debug_inspector (0.0.2)
     debugger-linecache (1.2.0)
     diff-lcs (1.2.5)
-    equalizer (0.0.9)
     elasticsearch (1.0.8)
       elasticsearch-api (= 1.0.7)
       elasticsearch-transport (= 1.0.7)
@@ -77,6 +76,7 @@ GEM
     elasticsearch-transport (1.0.7)
       faraday
       multi_json
+    equalizer (0.0.9)
     erubis (2.7.0)
     execjs (2.3.0)
     faraday (0.9.1)
@@ -184,11 +184,11 @@ GEM
     sdoc (0.4.1)
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
-    simple_oauth (0.3.1)
     searchkick (0.8.7)
       activemodel
       elasticsearch (>= 1)
       hashie
+    simple_oauth (0.3.1)
     slop (3.6.0)
     sprockets (2.12.3)
       hike (~> 1.2)
@@ -202,8 +202,6 @@ GEM
     thor (0.19.1)
     thread_safe (0.3.4)
     tilt (1.4.1)
-    turbolinks (2.5.3)
-      coffee-rails
     twitter (5.14.0)
       addressable (~> 2.3)
       buftok (~> 0.2.0)
@@ -246,8 +244,7 @@ DEPENDENCIES
   rspec-rails (~> 3.0)
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
-  turbolinks
-  twitter
   searchkick
+  twitter
   uglifier (>= 1.3.0)
   web-console (~> 2.0)
