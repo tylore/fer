@@ -9,7 +9,6 @@ class SessionsController < ApplicationController
      # raise auth["uid"].inspect
       @user = User.new
       @user.uid = auth["uid"]
-      @user.
       @user.save
       session[:user_id] = @user.uid
       redirect_to new_referral_path
