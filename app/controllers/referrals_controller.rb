@@ -19,7 +19,7 @@ class ReferralsController < ApplicationController
   end
 
   def show
-    @referral = Referral.find(params[:id])
+    @referral = Referral.last
   end
 
   
@@ -34,7 +34,11 @@ class ReferralsController < ApplicationController
       else 
         redirect_to new_referral_path
       end
-  end 
+  end
+
+  def tweet
+    twitter_client.update("It's Alive")
+  end
 
   def destroy
     @referral = Referral.find(params[:id])
