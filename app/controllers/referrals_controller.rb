@@ -19,7 +19,7 @@ class ReferralsController < ApplicationController
   end
 
   def show
-    @referral = Referral.find(params[:id])
+    @referral = Referral.last
   end
 
   

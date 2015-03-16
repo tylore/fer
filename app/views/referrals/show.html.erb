@@ -1,2 +1,58 @@
 <h1>Referrals#show</h1>
 <p>Find me in app/views/referrals/show.html.erb</p>
+
+
+<!-- is_happy -->
+<!-- is_shock -->
+<!-- is_emo -->
+<!-- is_hate -->
+
+<div class="row">
+	<div class="small-2 medium-4 columns">
+
+		<% if @referral.is_happy and @referral.is_shock and @referral.is_emo and @referral.is_hate %>
+			<%= render partial: 'image1' %>
+
+		<% elsif @referral.is_happy and @referral.is_shock and @referral.is_emo %>
+			<%= render partial: 'image2' %>
+
+		<% elsif @referral.is_happy and @referral.is_shock and @referral.is_hate %>
+			<%= render partial: 'image3' %>
+
+		<% elsif @referral.is_shock and @referral.is_emo %>
+			<%= render partial: 'image4' %>
+
+		<% elsif @referral.is_shock and @referral.is_emo and @referral.is_hate %>
+			<%= render partial: 'image5' %>
+
+		<% elsif @referral.is_emo and @referral.is_hate %> 
+			<%= render partial: 'image6' %> 
+
+		<% elsif @referral.is_happy and @referral.is_shock %>
+			<%= render partial: 'image7' %>
+
+		<% elsif @referral.is_happy and @referral.is_emo %>
+			<%= render partial: 'image8' %>
+
+		<% elsif @referral.is_happy and @referral.is_hate %>
+			<%= render partial: 'image9' %>
+
+		<% elsif @referral.is_happy %> 		
+			<%= render partial: 'image10' %>
+
+		<% elsif @referral.is_shock %> 
+			<%= render partial: 'iamge11' %>
+
+		<% elsif @referral.is_emo %>
+			<%= render partial: 'image12' %>
+
+		<% elsif @referral.is_hate %>
+			<%= render partial: 'image13' %>
+
+		<% else %>
+			<%= flash[:error] = "Your Fer cannot be saved. Please choose emotions." %>
+			
+		<% end %>
+
+	</div>	
+</div>
