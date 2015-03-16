@@ -43,12 +43,6 @@ class ReferralsController < ApplicationController
     redirect_to referral_path
   end
 
-  def dashboard
-   @fers = Referral.all
-
-    @fers.
-
-  end
 
   def destroy
     @referral = Referral.find(params[:id])
