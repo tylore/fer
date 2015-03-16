@@ -39,7 +39,15 @@ class ReferralsController < ApplicationController
 
   def tweet
     @tweet = Referral.last(params[:user_input])
-    twitter_client.update(@tweet.user_input)
+    twitter_client.update_with_media(@tweet.user_input, File.new('app/assets/images/1.jpg'))
+    redirect_to referral_path
+  end
+
+  def dashboard
+   @fers = Referral.all
+
+    @fers.
+
   end
 
   def destroy
