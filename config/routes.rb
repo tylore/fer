@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
 
-  resources :users
-  resources :referrals
+
   get "/auth/:provider/callback", to: "sessions#create"
 
   delete 'sessions' => 'sessions#destroy', as: :destroy_user_session
@@ -10,10 +9,11 @@ Rails.application.routes.draw do
   post 'referrals/tweet' => 'referrals#tweet', as: :turd
 
 
+  resources :users
+  resources :referrals
 
 
-
-  root to: 'referrals#index'
+  root to: 'users#new'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
