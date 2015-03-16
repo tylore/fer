@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
-
+  resources :users
+  resources :referrals
   get "/auth/:provider/callback", to: "sessions#create"
 
   delete 'sessions' => 'sessions#destroy', as: :destroy_user_session
@@ -10,8 +11,7 @@ Rails.application.routes.draw do
 
 
 
-  resources :users
-  resources :referrals
+
 
   root to: 'referrals#index'
 

@@ -1,22 +1,17 @@
-
 <br />
 <h1 class="new_fer">Create Your Fer!</h1>
 
 <br />
 <div class="row center-text">
-<!-- :html => {:class => 'custom'} -->
+  <!-- :html => {:class => 'custom'} -->
   <div class="small-6 small-centered columns ">
-  	 <div class="show_show">
+    <div class="show_show">
       <p><b>Show:</b>
-  		<%= "#{@referral.user_input}" && "#fer" %>
+        <%= @referral.user_input%>
+
+
+        <%= button_to 'Post Tweet', turd_path %>
       </p>
-     </div>
-   </div>
+    </div>
+  </div>
 </div>
-
-
-<%= @referral.user_input%>
-
-
-<%= button_to 'Post Tweet', turd_path %>
-
