@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="stylesheet/application.css" />
     
     <title><%= content_for?(:title) ? yield(:title) : "foundation-rails" %></title>
     <%= stylesheet_link_tag    "application" %>
@@ -12,45 +13,21 @@
   </head>
 
   <body>
+<<<<<<< HEAD
+=======
 <%= link_to 'Sign In With Twitter', '/auth/twitter' %>
 <%= link_to "Sign out", signout_path, id: "sign_out" %>
     <%= yield %>
 <hr/>
 
 <hr/>
+>>>>>>> master
 
-<!-- <div class="fixed">
-  <nav class="top-bar" data-topbar role="navigation">
-  <ul class="title-area">
-    <li class="name">Fer</li>
-      <h1><a href="#">My Site</a></h1>
-    </li>
-     <! Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
-    <!-- <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
-  </ul>
+<%= render template: 'layouts/_navbar.html.erb' %>
+<br />
 
-  <section class="top-bar-section">
-    <! Right Nav Section -->
-    <!-- ul class="right">
-      <div class="row collapse">
-      <div class="large-8 small-9 columns">
-      <input type="text" placeholder="Find your fav show!">
-      </div>
-      <div class="large-4 small-3 columns">
-        <a href="#" class="alert button expand">Search</a>
-      </div>
-      </div>
-      </li>
-        </ul>
-      </li>
-    </ul> -->
- 
-    <!-- Left Nav Section -->
-<!--     <ul class="left">
-    </ul>
-  </section>
-</nav>
-</div> -->
+    <%= yield %>
+
 
   </body>
 </html>

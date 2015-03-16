@@ -1,0 +1,43 @@
+<!-- foundation nav bar -->
+    <div class="absolute">
+      <nav class="top-bar" data-topbar>
+        <ul class="title-area">
+          <li class="name">
+            <h1><a href="#"><%= link_to "Fer!", new_user_path %></a></h1>
+          </li>
+          <li><a href="#"><%= @user_nickname %></a></li>
+          <li><%= session[:user_id] %></li>
+        </ul>
+        <section class="top-bar-section">
+          <ul class="right">
+            <li><a href="#"><%= link_to "Create a Fer", new_referral_path %></a></li>
+            <li><a href="#"><%= link_to "All Fers", referrals_path %></a></li>
+            <li><a href="#"><%= link_to "Home", new_user_path %></a></li>
+<!-- twitter login aand log out link switch off -->
+            <li><% if current_user != nil && current_user.uid != nil%>
+               <%= button_to "Logout", destroy_user_session_path, :method => :delete %>
+            <% else %>
+               <%= link_to 'Sign In With Twitter', '/auth/twitter' %>
+            <% end %></a></li>
+<!-- end of twitter login and off link switch off -->
+            <li class="has-form">
+              <div class="row collapse">
+                <div class="large-4 small-3 columns">
+                  <li><%= form_tag referrals_path, :method => :get do %>
+                      <%= text_field_tag :search, params[:search], placeholder: "Search a show!"%></li>
+                  <li><%= submit_tag "Search", :user_input => nil %></li>
+
+                  <% end %>
+              </div>
+            </li>
+          </ul>
+        </section>
+
+      </nav>
+    </div>
+
+
+
+
+
+

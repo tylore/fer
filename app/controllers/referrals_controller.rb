@@ -31,7 +31,7 @@ class ReferralsController < ApplicationController
     @referral = Referral.create(params.require(:referral).permit(:user_input, :is_hate, :is_emo, :is_happy, :is_awesome, :is_shock))
      @referral.user_input = @referral.user_input + '#fer'
       if @referral.save
-        redirect_to referrals_path
+        redirect_to referral_path
       else 
         redirect_to new_referral_path
       end

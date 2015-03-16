@@ -1,19 +1,7 @@
- <p id="notice"><%= notice %></p>
 
-    <%= form_tag referrals_path, :method => :get do %>
 
-    <%= text_field_tag :search, params[:search] %>
-
-    <%= submit_tag "Search your favorite show!", :user_input => nil %>
- 
-<% end %> 
-
-<ul>
-<li><%= link_to "Create Fers", new_referral_path %></li>
-<li><%= link_to "Sign Out", new_user_path %></li>
-</ul>
 <br /><br /> 
-<h1 class="new_fer">My Fers</h1><br />
+<h1 class="new_fer">All Fers</h1><br />
 <div class="row center-text">
 
  <h1> Test </h1>
@@ -28,8 +16,7 @@
   <!-- <p>Awesome! <%= referral.is_awesome %></p> -->
   <p>Hated it because it was SO GOOD! <%= referral.is_hate %></p><br />
   
-  	 <%= link_to 'Delete', referral, method: :delete, data: { confirm: 'Are you sure?' } %></h5><br>
-     <hr /> 
+  	 
    </div>
    <% end %>
  
