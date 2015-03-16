@@ -20,7 +20,7 @@ class ReferralsController < ApplicationController
 
   def show
     @referral = Referral.last
-    @totem = render asset/images/1.jpg
+
 
   end
 
