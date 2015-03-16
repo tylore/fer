@@ -21,7 +21,7 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.create(params.require(:user).permit(:twitter, :password))
+    @user = User.create(params.require(:user).permit(:nickname))
     if @user.save
        redirect_to new_referral_path
     else 

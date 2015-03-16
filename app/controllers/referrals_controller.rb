@@ -19,7 +19,7 @@ class ReferralsController < ApplicationController
   end
 
   def show
-    @referral = Referral.find(params[:id])
+    @referral = Referral.last
   end
 
   
@@ -29,12 +29,26 @@ class ReferralsController < ApplicationController
 
   def create
     @referral = Referral.create(params.require(:referral).permit(:user_input, :is_hate, :is_emo, :is_happy, :is_awesome, :is_shock))
+     @referral.user_input = @referral.user_input + '#fer'
       if @referral.save
         redirect_to referral_path
       else 
         redirect_to new_referral_path
       end
-  end 
+  end
+
+  def tweet
+    @tweet = Referral.last(params[:user_input])
+    twitter_client.update_with_media(@tweet.user_input, File.new('app/assets/images/1.jpg'))
+    redirect_to referral_path
+  end
+
+  def dashboard
+   @fers = Referral.all
+
+    @fers.
+
+  end
 
   def destroy
     @referral = Referral.find(params[:id])
