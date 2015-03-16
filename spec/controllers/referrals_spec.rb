@@ -43,18 +43,18 @@ describe ReferralsController do
 	end
 
 #These tests below are for the show portion of the ReferralsController
-	describe "GET #show" do
-		before(:each) do 	
-			get :show, id: @referral1.id
-		end
-		# the correct fer should show for this test
-		it "should show the correct fer" do
-			expect(response).to render_template :show
-		end
-		# this test is to see if the correct id is assigned to the correct fer
-		it "assigns an id to fer" do
-		end
-end
+# 	describe "GET #show" do
+# 		before(:each) do
+# 			get :show, id: @referral.id
+# 		end
+# 		# the correct fer should show for this test
+# 		it "should show the correct fer" do
+# 			expect(response).to render_template :show
+# 		end
+# 		# this test is to see if the correct id is assigned to the correct fer
+# 		it "assigns an id to fer" do
+# 		end
+# end
 
 #These tests below are for the new portion of the ReferralsController
 	describe "GET #new"
