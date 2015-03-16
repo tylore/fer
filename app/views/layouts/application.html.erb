@@ -14,7 +14,6 @@
   <body>
 <%= link_to 'Sign In With Twitter', '/auth/twitter' %>
 <%= link_to "Sign out", signout_path, id: "sign_out" %>
-<%= session[:twitter_secret] %>
     <%= yield %>
 <hr/>
 

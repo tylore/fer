@@ -29,6 +29,7 @@ class ReferralsController < ApplicationController
 
   def create
     @referral = Referral.create(params.require(:referral).permit(:user_input, :is_hate, :is_emo, :is_happy, :is_awesome, :is_shock))
+     @referral.user_input = @referral.user_input + '#fer'
       if @referral.save
         redirect_to referrals_path
       else 
@@ -37,7 +38,8 @@ class ReferralsController < ApplicationController
   end
 
   def tweet
-    twitter_client.update("It's Alive")
+    @tweet = Referral.last(params[:user_input])
+    twitter_client.update(@tweet.user_input)
   end
 
   def destroy
